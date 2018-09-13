@@ -4,22 +4,25 @@ import {
     Text,
     StyleSheet
 } from "react-native";
+import AddTodo from './containers/AddTodo';
+import VisibleTodos from './containers/VisibleTodos'
 
-class TodoApp extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text>TodoApp</Text>
+export default class TodoApp extends Component {
+  render() {
+    return (
+        <View style={styles.container}>
+            <AddTodo />
+            <View>
+                <VisibleTodos/>
             </View>
-        );
-    }
+        </View>
+    );
+  }
 }
-export default TodoApp;
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
-    }
+  container: {
+    flex: 1,
+    paddingTop: 40
+  }
 });
